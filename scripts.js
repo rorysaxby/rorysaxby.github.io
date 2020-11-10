@@ -1,20 +1,21 @@
 (() =>{
     
     const vibrate = () =>{
-        navigator.vibrate(2000);
+        navigator.vibrate(1000);
     }
 
     const initVibrate = () =>{
-        const vibInt = setInterval(vibrate, 3000);
+        const vibInt = setInterval(vibrate, 2000);
     }
 
     const stopVibrate = () =>{
         setTimeout(()=>{
             clearInterval(vibInt)
-        }, 3000)
+        }, 6000)
     }
 
     setTimeout(()=>{
         initVibrate();
+        stopVibrate();
     }, 3000)
 })();
